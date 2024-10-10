@@ -34,6 +34,6 @@
   text-align: left;
 }
 .button-section {
-  align-content: left;
-  align-items: left;
+  display: flex;
+  padding-top: 10px;
 }

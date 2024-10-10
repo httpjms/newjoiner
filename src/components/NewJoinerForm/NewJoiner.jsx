@@ -62,6 +62,7 @@ const NewJoiner = ({ onGenerate }) => {
       jobTitle,
       department,
       manager,
+      country,
       selectedCountry,
       selectedCity,
       address,
