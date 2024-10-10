@@ -1,0 +1,60 @@
+[
+  {
+    "code": "IN",
+    "country": "India",
+    "city": [
+      {
+        "cityName": "Mumbai",
+        "address": "105, Mahinder Chambers 1st Floor, WT Patil Marg, Opp Pepsi Factory, Chembur, Maharashtra",
+        "zipCode": 400071
+      },
+      {
+        "cityName": "Bangalore",
+        "address": "Unit no.1002, 10th Floor, Campus 8B, Ecoworld, Bellandur",
+        "zipCode": 560103
+      },
+      {
+        "cityName": "Chennai",
+        "address": "Swire Digital Centre, Campus 3A, RMZ Millenia II, MGR Main Rd, Kandhanchavadi, Perungudi, Chennai, Tamil Nadu",
+        "zipCode": 600096
+      }
+    ]
+  },
+  {
+    "code": "SG",
+    "country": "Singapore",
+    "city": [
+      {
+        "cityName": "Singapore",
+        "address": "300 Beach Road #27-01, The Concourse",
+        "zipCode": 199555
+      }
+    ]
+  },
+  {
+    "code": "AU",
+    "country": "Australlia",
+    "city": [
+      {
+        "cityName": "Brisbane",
+        "address": "Level 2, 260 Queen Street, QLD",
+        "zipCode": 4000
+      },
+      {
+        "cityName": "Darwin",
+        "address": "Winnellie GPO Box 35807, NT",
+        "zipCode": "0821"
+      },
+      {
+        "cityName": "Melbourne",
+        "address": "Level 6, 607 Bourke Street, Melbourne, VIC",
+        "zipCode": 3000
+      },
+      {
+        "cityName": "Sydney",
+        "address": "Suite 1901 Level 19, 580 George Street, NSW",
+        "zipCode": 2000
+      }
+    ]
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "taskID": 1,
+    "taskName": "Active Directory",
+    "taskDescription": "Copy the Account details of the user to AD",
+    "isComplete": false
+  },
+  {
+    "taskID": 2,
+    "taskName": "Zendesk",
+    "taskDescription": "Send the request to Skype Group 'Isatambay sa looban'",
+    "isComplete": false
+  },
+  {
+    "taskID": 3,
+    "taskName": "SDP",
+    "taskDescription": "Send the request to the Teams GC",
+    "isComplete": false
+  },
+  {
+    "taskID": 4,
+    "taskName": "Coruson",
+    "taskDescription": "Duplicate your ticket, Edit and add '- Coruson Account Creation' on the subject and assign the ticket to Jaya. Send the account details to Jaya",
+    "isComplete": false
+  }
+]
