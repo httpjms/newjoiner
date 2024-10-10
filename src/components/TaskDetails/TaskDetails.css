@@ -1,6 +1,11 @@
 .task-container {
   max-width: 500px;
+  margin: auto;
+  min-height: auto;
+
   margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #dde8f0;
 }
 .employee-task-details {
   display: flex;
@@ -8,4 +13,27 @@
 }
 .task-name-details {
   cursor: pointer;
+}
+.completed {
+  border: 3px solid rgb(0, 255, 106);
+}
+.btnCompleted,
+.btnCompleted:hover {
+  background-color: #004581;
+}
+
+.btnCompleted,
+.btnComplete {
+  letter-spacing: 1px;
+}
+.task-description {
+  padding-top: 5px;
+  text-align: left;
+}
+.task-per-list {
+  text-align: left;
+}
+.button-section {
+  align-content: left;
+  align-items: left;
 }
