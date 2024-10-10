@@ -1,7 +1,8 @@
 import { useState } from "react";
-import countryList from "../data/countryList.json";
+import "./newjoiner.css";
+import countryList from "../../data/countryList.json";
 
-const NewJoiner = () => {
+const NewJoiner = ({ onGenerate }) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [emailAdd, setEmailAdd] = useState("");
@@ -38,8 +39,38 @@ const NewJoiner = () => {
     setZipCode(cityData ? cityData.zipCode : "");
   };
 
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (
+      !firstName ||
+      !lastName ||
+      !emailAdd ||
+      !adid ||
+      !jobTitle ||
+      !department ||
+      !manager ||
+      !country ||
+      !selectedCity ||
+      !address
+    )
+      return;
+    const newEmploye = {
+      firstName,
+      lastName,
+      emailAdd,
+      adid,
+      jobTitle,
+      department,
+      manager,
+      selectedCountry,
+      selectedCity,
+      address,
+      zipCode,
+    };
+    onGenerate(newEmploye);
+  }
   return (
-    <form action="" className="newjoiner-Form">
+    <form className="newjoiner-Form" onSubmit={handleSubmit}>
       <h3>Employee Details Form</h3>
       <div className="flex-box">
         <input
@@ -92,10 +123,15 @@ const NewJoiner = () => {
           value={manager}
           onChange={(e) => setManager(e.target.value)}
         />
-        <select value={selectedCountry} onChange={handleCountryChange}>
+        <select
+          value={selectedCountry}
+          className="countryOpt"
+          onChange={handleCountryChange}
+        >
           <option value="" disabled>
             --Select a Country--
           </option>
+
           {countryList.map((country) => (
             <option key={country.code} value={country.code}>
               {country.country}
@@ -122,9 +158,11 @@ const NewJoiner = () => {
 
         <input type="text" value={`${address} ${zipCode}`} readOnly />
       </div>
-      <button className="btnGenerate">
-        <strong>GENERATE </strong>
-      </button>
+      <div className="btnGenerate-section">
+        <button className="btnGenerate">
+          <strong>GENERATE </strong>
+        </button>
+      </div>
     </form>
   );
 };

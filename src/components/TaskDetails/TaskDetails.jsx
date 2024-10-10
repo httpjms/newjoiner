@@ -1,8 +1,9 @@
 import { useState } from "react";
 import "./TaskDetails.css";
 import ActiveDirectory from "../../App/ActiveDirectory";
+import Zendesk from "../../App/Zendesk";
 
-const TaskDetails = ({ task, emp, onComplete }) => {
+const TaskDetails = ({ task, employee, onComplete }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div
@@ -12,27 +13,39 @@ const TaskDetails = ({ task, emp, onComplete }) => {
     >
       <div className="employee-task-details">
         <div className="task-details">
-          <h3>{task.taskName}</h3>
+          <h3>
+            {task.taskName} {task.isComplete ? "- Completed" : ""}{" "}
+          </h3>
         </div>
 
         <div className="task-name-details" onClick={() => setIsOpen(!isOpen)}>
-          <strong>{isOpen ? "-" : "+"}</strong>
+          <h3>
+            <strong>{isOpen ? "-" : "+"}</strong>
+          </h3>
         </div>
       </div>
 
-      <div className="task-description">{isOpen && task.taskDescription}</div>
+      <div className="task-description">
+        <h4>{isOpen && task.taskDescription}</h4>
+      </div>
 
-      {isOpen && task.taskName === "Active Directory" && (
-        <ActiveDirectory employee={emp} task={task} />
-      )}
+      <div className="task-per-list">
+        {isOpen && task.taskName === "Active Directory" && (
+          <ActiveDirectory employee={employee} />
+        )}
+        {isOpen && task.taskName === "Zendesk" && (
+          <Zendesk employee={employee} />
+        )}
+      </div>
 
       <div className="button-section">
         {isOpen && (
           <button
+            className={task.isComplete ? "btnCompleted" : "btnComplete"}
             onClick={() => onComplete(task.taskID)}
             disabled={task.isComplete ? true : false}
           >
-            {task.isComplete ? "Completed" : "Complete"}
+            {task.isComplete ? "COMPLETED" : "COMPLETE"}
           </button>
         )}
       </div>
