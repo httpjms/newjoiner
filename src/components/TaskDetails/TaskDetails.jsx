@@ -2,7 +2,8 @@ import { useState } from "react";
 import "./TaskDetails.css";
 import ActiveDirectory from "../../App/ActiveDirectory";
 import Zendesk from "../../App/Zendesk";
-
+import SDP from "../../App/SDP";
+import Coruson from "../../App/Coruson";
 const TaskDetails = ({ task, employee, onComplete }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -35,6 +36,10 @@ const TaskDetails = ({ task, employee, onComplete }) => {
         )}
         {isOpen && task.taskName === "Zendesk" && (
           <Zendesk employee={employee} />
+        )}
+        {isOpen && task.taskName === "SDP" && <SDP employee={employee} />}
+        {isOpen && task.taskName === "Coruson" && (
+          <Coruson employee={employee} />
         )}
       </div>
 
