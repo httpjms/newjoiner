@@ -24,7 +24,7 @@
 
 .btnCompleted,
 .btnComplete {
-  letter-spacing: 1px;
+  letter-spacing: 0, 5px;
 }
 .task-description {
   padding-top: 5px;
@@ -35,5 +35,14 @@
 }
 .button-section {
   display: flex;
+  gap: 20px;
   padding-top: 10px;
+}
+.task-description p {
+  font-weight: 500px;
+  font-size: 16px;
+}
+
+p {
+  font-size: 12px;
 }

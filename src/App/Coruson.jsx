@@ -6,7 +6,7 @@ function Coruson({ employee }) {
       <p>Hi Jaya,</p>
       <p>
         For your kind assistance please on the creation of Coruson Profile for
-        below new joiner:{" "}
+        below new joiner:
       </p>
       <p>Forename: {employee.firstName} </p>
       <p>Lastname: {employee.lastName} </p>

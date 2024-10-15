@@ -4,6 +4,7 @@ import ActiveDirectory from "../../App/ActiveDirectory";
 import Zendesk from "../../App/Zendesk";
 import SDP from "../../App/SDP";
 import Coruson from "../../App/Coruson";
+
 const TaskDetails = ({ task, employee, onComplete }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -27,7 +28,7 @@ const TaskDetails = ({ task, employee, onComplete }) => {
       </div>
 
       <div className="task-description">
-        <h4>{isOpen && task.taskDescription}</h4>
+        <p>{isOpen && task.taskDescription}</p>
       </div>
 
       <div className="task-per-list">
