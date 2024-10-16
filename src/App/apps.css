@@ -6,3 +6,9 @@ span {
   display: flex;
   justify-content: space-between;
 }
+
+.emp-details {
+  width: 400px;
+  word-wrap: break-word;
+  padding-top: 20px;
+}
