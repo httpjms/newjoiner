@@ -1,19 +1,23 @@
 import React from "react";
-
+import useClipboard from "../Utils/CopyToClipboard";
+import Notification from "../Utils/Notification";
 function Coruson({ employee }) {
+  const copyCoruson = `Hi Jaya,\nFor your kind assistance please on the creation of Coruson profile for below new joiner: \n\nForename: ${employee.firstName}\nLastname: ${employee.lastName}\nEmail Address: ${employee.emailAdd}\nDepartment: ${employee.department}\nOKTAID: ${employee.adid}\nCountry: ${employee.country}\n\nThank you!`;
+  const { copyToClipboard, isVisible } = useClipboard();
   return (
     <div className="emp-task">
-      <p>Hi Jaya,</p>
-      <p>
-        For your kind assistance please on the creation of Coruson Profile for
-        below new joiner:
-      </p>
-      <p>Forename: {employee.firstName} </p>
-      <p>Lastname: {employee.lastName} </p>
-      <p>Email Address: {employee.emailAdd} </p>
-      <p>Department: {employee.department} </p>
-      <p>OKTA ID: {employee.adid} </p>
-      <p>Country: {employee.country} </p>
+      <div className="emp-details">
+        {copyCoruson.split("\n").map((line, index) => (
+          <span key={index}>
+            {line}
+            {index < copyCoruson.split("\n").length - 1 && <br />}
+          </span>
+        ))}
+      </div>
+      <div>
+        <button onClick={() => copyToClipboard(copyCoruson)}>Copy </button>
+        <Notification message="Copied ✅" isVisible={isVisible} />
+      </div>
     </div>
   );
 }
