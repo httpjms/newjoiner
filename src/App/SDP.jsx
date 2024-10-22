@@ -15,7 +15,7 @@ function SDP({ employee }) {
           </span>
         ))}
       </div>
-      <div>
+      <div className="btn-Copy">
         <button onClick={() => copyToClipboard(copySDP)}>Copy </button>
         <Notification message="Copied ✅" isVisible={isVisible} />
       </div>
