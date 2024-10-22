@@ -16,7 +16,7 @@ function ActiveDirectory({ employee }) {
     additionalApps = "Okta_Ramco_Prod_Users;";
   }
 
-  const copyAD = `Fullname: ${employee.firstName} ${employee.lastName}\nEmail: ${employee.emailAdd}\nADID: ${employee.adid}\nJob Title: ${employee.jobTitle}\nDepartment: ${employee.department}\nManager: ${employee.manager}\nAddress: ${employee.address}\nZip Code: ${employee.zipCode}\nCountry: ${employee.country}\n\n Copy the below AD Groups to the "Member of" tab\n\n  ${defaultApp}${additionalApps}`;
+  const copyAD = `Fullname: ${employee.firstName} ${employee.lastName}\nEmail: ${employee.emailAdd}\nADID: ${employee.adid}\nPassword: ${employee.password}\nJob Title: ${employee.jobTitle}\nDepartment: ${employee.department}\nManager: ${employee.manager}\nAddress: ${employee.address}\nCity: ${employee.selectedCity}\nZip Code: ${employee.zipCode}\nCountry: ${employee.country}\n\n Copy the below AD Groups to the "Member of" tab\n\n  ${defaultApp}${additionalApps}`;
 
   const { copyToClipboard, isVisible } = useClipboard();
   return (
@@ -29,7 +29,7 @@ function ActiveDirectory({ employee }) {
           </span>
         ))}
       </div>
-      <div>
+      <div className="btn-Copy">
         <button onClick={() => copyToClipboard(copyAD)}>Copy </button>
         <Notification message="Copied ✅" isVisible={isVisible} />
       </div>

@@ -2,25 +2,25 @@ import React from "react";
 import useClipboard from "../Utils/CopyToClipboard";
 import Notification from "../Utils/Notification";
 
-function Zendesk({ employee }) {
-  const copyZendesk = `For Enabling po ng Zendesk. thank you! \n\nDisplay Name: ${employee.firstName} ${employee.lastName}\nEmail Address: ${employee.emailAdd}`;
+function LocalIT({ employee }) {
+  const copyLocalIT = `Display Name: ${employee.firstName} ${employee.lastName}\nEmail Address: ${employee.emailAdd}\nADID: ${employee.adid}\nPassword: ${employee.password} `;
   const { copyToClipboard, isVisible } = useClipboard();
   return (
     <div className="emp-task">
       <div className="emp-details">
-        {copyZendesk.split("\n").map((line, index) => (
+        {copyLocalIT.split("\n").map((line, index) => (
           <span key={index}>
             {line}
-            {index < copyZendesk.split("\n").length - 1 && <br />}
+            {index < copyLocalIT.split("\n").length - 1 && <br />}
           </span>
         ))}
       </div>
       <div className="btn-Copy">
-        <button onClick={() => copyToClipboard(copyZendesk)}>Copy </button>
+        <button onClick={() => copyToClipboard(copyLocalIT)}>Copy </button>
         <Notification message="Copied ✅" isVisible={isVisible} />
       </div>
     </div>
   );
 }
 
-export default Zendesk;
+export default LocalIT;

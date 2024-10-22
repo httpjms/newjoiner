@@ -4,12 +4,6 @@ import TaskDetails from "./TaskDetails/TaskDetails";
 
 const TasksList = ({ employee }) => {
   const [tasks, setTasks] = useState(tasksList);
-  const [copyAD, setCopyAD] = useState("");
-
-  function onCopyAD() {
-    const copyToAD = `Fullname: ${employee.firstName} ${employee.lastName}\nEmail: ${employee.emailAdd}\nADID: ${employee.adid}\nJob Title: ${employee.jobTitle}\nDepartment: ${employee.department}\nManager: ${employee.manager}\nManager: ${employee.manager}\nAddress: ${employee.address}\nZip Code: ${employee.zipCode}\nCountry: ${employee.country}`;
-    setCopyAD(copyToAD);
-  }
 
   function handleCompleteTask(id) {
     setTasks((tasks) =>
@@ -27,7 +21,6 @@ const TasksList = ({ employee }) => {
           key={task.taskID}
           employee={employee}
           onComplete={handleCompleteTask}
-          copyAD={copyAD}
         />
       ))}
     </div>

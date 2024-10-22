@@ -4,6 +4,9 @@ import ActiveDirectory from "../../App/ActiveDirectory";
 import Zendesk from "../../App/Zendesk";
 import SDP from "../../App/SDP";
 import Coruson from "../../App/Coruson";
+import K2 from "../../App/K2";
+import SwireConnect from "../../App/SwireConnect";
+import LocalIT from "../../App/LocalIT";
 
 const TaskDetails = ({ task, employee, onComplete }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,8 +42,15 @@ const TaskDetails = ({ task, employee, onComplete }) => {
           <Zendesk employee={employee} />
         )}
         {isOpen && task.taskName === "SDP" && <SDP employee={employee} />}
+        {isOpen && task.taskName === "Local IT" && (
+          <LocalIT employee={employee} />
+        )}
         {isOpen && task.taskName === "Coruson" && (
           <Coruson employee={employee} />
+        )}
+        {isOpen && task.taskName === "K2" && <K2 employee={employee} />}
+        {isOpen && task.taskName === "SwireConnect" && (
+          <SwireConnect employee={employee} />
         )}
       </div>
 

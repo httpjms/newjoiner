@@ -14,7 +14,7 @@ function Coruson({ employee }) {
           </span>
         ))}
       </div>
-      <div>
+      <div className="btn-Copy">
         <button onClick={() => copyToClipboard(copyCoruson)}>Copy </button>
         <Notification message="Copied ✅" isVisible={isVisible} />
       </div>
