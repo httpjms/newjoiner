@@ -6,6 +6,12 @@
     "isComplete": false
   },
   {
+    "taskID": 8,
+    "taskName": "O365",
+    "taskDescription": "Please make sure that licenses are already assigned before running the script",
+    "isComplete": false
+  },
+  {
     "taskID": 2,
     "taskName": "Zendesk",
     "taskDescription": "Send the request to Skype Group 'Zendesk Account Creation'",

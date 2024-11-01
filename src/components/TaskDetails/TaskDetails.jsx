@@ -7,6 +7,7 @@ import Coruson from "../../App/Coruson";
 import K2 from "../../App/K2";
 import SwireConnect from "../../App/SwireConnect";
 import LocalIT from "../../App/LocalIT";
+import O365 from "../../App/O365";
 
 const TaskDetails = ({ task, employee, onComplete }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,6 +39,7 @@ const TaskDetails = ({ task, employee, onComplete }) => {
         {isOpen && task.taskName === "Active Directory" && (
           <ActiveDirectory employee={employee} />
         )}
+        {isOpen && task.taskName === "O365" && <O365 employee={employee} />}
         {isOpen && task.taskName === "Zendesk" && (
           <Zendesk employee={employee} />
         )}
