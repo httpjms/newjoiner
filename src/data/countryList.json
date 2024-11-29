@@ -84,7 +84,7 @@
     ]
   },
   {
-    "code": "PNG",
+    "code": "PG",
     "country": "Papua New Guinea",
     "city": [
       {
@@ -142,6 +142,17 @@
         "cityName": "Puyallup",
         "address": "1019 39th Avenue SE Suite 210, Puyallup, WA",
         "zipCode": 98374
+      }
+    ]
+  },
+  {
+    "code": "NC",
+    "country": "New Caledonia",
+    "city": [
+      {
+        "cityName": "Noumea",
+        "address": "22, Avenue James Cook BP 97",
+        "zipCode": 98845
       }
     ]
   }
