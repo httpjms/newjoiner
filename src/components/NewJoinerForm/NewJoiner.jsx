@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./newjoiner.css";
 import countryList from "../../data/countryList.json";
+import departmentList from "../../data/department.json";
 
 const NewJoiner = ({ onGenerate }) => {
   const sortedCountryList = countryList.sort((a, b) => {
@@ -132,14 +133,25 @@ const NewJoiner = ({ onGenerate }) => {
           />
         </div>
         <div className="flex-box">
-          <input
+          <select
+            value={department}
+            onChange={(e) => setDepartment(e.target.value)}
+          >
+            <option value="" disabled>
+              Select Department
+            </option>
+            {departmentList.map((dept) => (
+              <option key={dept.id}>{dept.deptName}</option>
+            ))}
+          </select>
+          {/* <input
             type="text"
             placeholder="Department"
             value={department}
             onChange={(e) =>
               setDepartment(capitalizeFirstLetter(e.target.value))
             }
-          />
+          /> */}
           <input
             type="text"
             placeholder="Manager"
