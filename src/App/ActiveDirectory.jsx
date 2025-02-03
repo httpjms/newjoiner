@@ -6,7 +6,7 @@ import { useState } from "react";
 function ActiveDirectory({ employee }) {
   let additionalApps = "";
   const [defaultApp, setDefaultApp] = useState(
-    `AAD_Sync;Okta_Agent_Contact_Users;Okta_Citrix_${employee.selectedCountry}_Users;Okta_Concur_${employee.selectedCountry}_Users;Okta_Concur_${employee.selectedCountry}_Users;Okta_corp_philanthropy_Prod_Users;Okta_Coruson_Prod_Users;Okta_Dashlane_${employee.selectedCountry}_Users;Okta_Data_Asset_Register_Prod;Okta_GiftsAndHospitality_Prod_Users;Okta_Ideation_Portal_Users;Okta_Intranet_${employee.selectedCountry}_Users;Okta_K2PROD_Users;Okta_Litmos_${employee.selectedCountry}_Users;Okta_ME_Users;Okta_OnshoreEvent_Users;Okta_Percipio_${employee.selectedCountry}_Users;Okta_SwireConnect_${employee.selectedCountry}_Users;Okta_VIrtualGratitude_${employee.selectedCountry}_Users;Okta_Zendesk_SS_KB_Prod_Users;Okta_Zoom_CNCO;`
+    `AAD_Sync;Okta_Agent_Contact_Users;Okta_Citrix_${employee.selectedCountry}_Users;Okta_Concur_${employee.selectedCountry}_Users;Okta_Concur_${employee.selectedCountry}_Users;Okta_corp_philanthropy_Prod_Users;Okta_Coruson_Prod_Users;Okta_Dashlane_${employee.selectedCountry}_Users;Okta_Data_Asset_Register_Prod;Okta_GiftsAndHospitality_Prod_Users;Okta_Ideation_Portal_Users;Okta_Intranet_${employee.selectedCountry}_Users;Okta_K2PROD_Users;Okta_Litmos_${employee.selectedCountry}_Users;Okta_ME_Users;Okta_OnshoreEvent_Users;Okta_Percipio_${employee.selectedCountry}_Users;Okta_SwireConnect_${employee.selectedCountry}_Users;Okta_VIrtualGratitude_${employee.selectedCountry}_Users;Okta_Zendesk_SS_KB_Prod_Users;Okta_Zoom_CNCO;Okta_Intellect_Users;`
   );
 
   if (employee.selectedCountry === "SG") {
