@@ -134,6 +134,18 @@
       }
     ]
   },
+  
+  {
+    "code": "AS",
+    "country": "American Samoa",
+    "city": [
+      {
+        "cityName": "Pago Pago",
+        "address": "Fagatogo Square #103",
+        "zipCode": 96799
+      }
+    ]
+  },
   {
     "code": "US",
     "country": "United States",
